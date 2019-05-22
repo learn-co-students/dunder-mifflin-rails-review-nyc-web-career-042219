@@ -1,0 +1,10 @@
+<h1>Dunder Mifflin's Dogs:</h1>
+<h2>
+  <ul>
+  <%@dogs.each do |dog|%>
+    <li><%= link_to dog.name, dog_path(dog) %>
+  <%end%>
+  </ul>
+<h3> <%= link_to 'Visit Employees', employees_path, :method => :get %></h3>
+  <h3>   <%= button_to 'Sort Dogs by Number of Employees', dogs_sort_path, :method => :get %></h3>
+</h2>

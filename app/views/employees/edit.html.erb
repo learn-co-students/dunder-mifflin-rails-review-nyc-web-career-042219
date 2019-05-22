@@ -1,0 +1,30 @@
+<h1>Employee Edit Form</h1>
+<%= form_for @employee do |f| %>
+  <p><%= f.label :first_name %>:
+  <%= f.text_field :first_name %><br />
+
+  <p><%= f.label :last_name %>:
+  <%= f.text_field :last_name %><br />
+
+  <p><%= f.label :alias %>:
+  <%= f.text_field :alias %><br />
+
+  <p><%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <p><%= f.label :office %>:
+  <%= f.text_field :office %><br />
+
+  <p><%= f.label :photo %>:
+  <%= f.text_field :img_url %><br />
+
+  <p><%= f.label :dog %>:
+  <%= f.collection_select :dog_id, Dog.all, :id, :name%>
+
+  <% if flash[:notice] %>
+  <div>
+    <p><%= notice %></p>
+  </div>
+  <% end %>
+  <p><%= f.submit %>
+<% end %>
