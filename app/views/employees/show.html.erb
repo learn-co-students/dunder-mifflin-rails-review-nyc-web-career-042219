@@ -1,0 +1,10 @@
+<h1><%= @employee.full_name %></h1>
+
+<h3>Alias: </h3><%= @employee.alias %>
+<h3>Title: </h3><%= @employee.title %>
+<h3>Office: </h3><%= @employee.office %>
+<h3>Image: </h3><%= image_tag @employee.img_url %>
+
+<%= button_to "Edit Employee", edit_employee_path(@employee), method: :get %>
+<%= button_to "Delete Employee", employee_path(@employee), method: :delete %>
+<%= button_to "Index", employees_path, method: :get %>
