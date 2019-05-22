@@ -1,0 +1,20 @@
+<script type="text/javascript">
+	$("#orderEmployees").on("click", function(){
+	changeOrder();
+});
+
+</script>
+
+<h1>Dogs</h1>
+
+<% @dogs.order_dogs.each do |dog| %>
+	<li><%= link_to dog.name, dog_path(dog) %></li>
+	
+<%end%>
+
+<input id="orderDogs" type="button" value="Order Dogs" />
+
+<%=button_to "View All Employees", employees_path, method: :get, :id => "button"%>
+<%=button_to "Create Dog", new_dog_path, method: :get%>
+
+
