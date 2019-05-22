@@ -1,0 +1,9 @@
+<h1> <%= @employee.alias %>'s Page </h1>
+<ul>
+<li><%= @employee.first_name %></li>
+<li><%= @employee.last_name %></li>
+<li><%= @employee.alias %></li>
+<li><%= @employee.title %></li>
+<li><%= @employee.office %></li>
+</ul>
+<%= button_to "Delete Employee", destroyemployee_path(@employee), method: :delete %>

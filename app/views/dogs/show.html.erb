@@ -1,0 +1,15 @@
+<h1> Dog's Page </h1>
+
+<h3> Name </h3>
+<li><%= @dog.name %></li>
+<h3> Breed </h3>
+<li><%= @dog.breed%></li>
+<h3> Age </h3>
+<li><%= @dog.age %></li>
+
+<h3> Owner(s) </h3>
+<% @dog.employees.each do |employee| %>
+  <li><%= link_to employee.first_name, employee %></li>
+<% end %>
+
+<%= button_to "Delete Dog", destroydog_path(@dog), method: :delete %>
