@@ -1,0 +1,14 @@
+<h1>Employees</h1>
+
+<% @employees.each do |employee| %>
+	<li><%= link_to "#{employee.first_name} #{employee.last_name}", employee_path(employee) %></li>
+	
+<%end%>
+
+<input id="orderEmployees" type="button" value="Order Employees" />
+
+
+<%=button_to "View All Dogs", dogs_path, method: :get%>
+<%=button_to "Create Employee", new_employee_path, method: :get%>
+
+

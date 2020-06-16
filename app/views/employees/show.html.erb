@@ -1,0 +1,21 @@
+<h1><%=@employee.first_name%></h1>
+	<ul>Last Name:<%= @employee.last_name%></ul>
+	<ul>Title:<%= @employee.title%></ul>
+	<ul>Alias:<%= @employee.alias%></ul>
+	<ul>Office:<%= @employee.office%></ul>
+	<% if !@employee.dog.nil?%>
+	<ul>Dog: <%=link_to @employee.dog.name, dog_path(@employee.dog)%></ul>
+	<% else %>
+	<ul>This employees has no dog.</ul>
+
+	<%end%>
+
+	<%=image_tag @employee.img_url unless @employee.img_url.nil?%>
+	
+
+	<%=button_to "Edit Employee", edit_employee_path, method: :get%>
+	<br>
+	<%=button_to "Delete Employee", @employee, method: :delete%>
+	<br>
+	<%=button_to "View All Employees", employees_path, method: :get%>
+
