@@ -1,0 +1,32 @@
+<h1>New Employee Form</h1>
+
+<%= form_for @employee do |f| %>
+  <p><%= f.label :first_name %>:
+  <%= f.text_field :first_name %>
+
+  <p><%= f.label :last_name %>:
+  <%= f.text_field :last_name %>
+
+  <p><%= f.label :alias %>:
+  <%= f.text_field :alias %>
+
+  <p><%= f.label :title %>:
+  <%= f.text_field :title %>
+
+  <p><%= f.label :office %>:
+  <%= f.text_field :office %>
+
+  <p><%= f.label :photo %>:
+  <%= f.text_field :img_url %>
+
+  <p><%= f.label :dog %>:
+  <%= f.collection_select :dog_id, Dog.all, :id, :name%>
+
+  <% if flash[:notice] %>
+  <div>
+    <p><%= notice %></p>
+  </div>
+  <% end %>
+
+  <p><%= f.submit %>
+<% end %>

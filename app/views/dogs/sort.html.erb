@@ -1,0 +1,8 @@
+<h1>Sorted Doggies!</h1>
+<h2>
+<ul>
+<%@sorted.each do |dog|%>
+  <li><p><%=link_to dog.name, dog_path(dog)%>
+    <%end%>
+  </ul>
+  </h2>
