@@ -1,0 +1,22 @@
+<h2><%= @employee.first_name %></h2>
+
+<% if flash[:alias] %>
+  <h3>Age <%=flash[:alias]%></h3>
+<%end%>
+
+<% if flash[:title] %>
+  <h3>Name <%=flash[:title]%></h3>
+<%end%>
+
+
+<p>First Name: <%= @employee.first_name %></p>
+<p>Last Name: <%= @employee.last_name %></p>
+<p>Alias: <%= @employee.alias %></p>
+<p>Title: <%= @employee.title %></p>
+<p>Office: <%= @employee.office %></p>
+<p>Dog: <%= @dog.name %></p>
+<% if @employee.img_url %>
+        <%= image_tag @employee.img_url, size: "150x100" %>
+<% end %>
+
+<%= button_to "edit", edit_employee_path, method: :get %>
