@@ -1,0 +1,5 @@
+<%= form_for @employee, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :first_name %>
+  <%= f.collection_select(:dog_id, Dog.all, :id, :name)%>
+  <%= f.submit "Create" %>
+<% end %>
