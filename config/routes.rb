@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
+  get "dogs/index_by_employee_amount", to: "dogs#index_by_employee_amount", as: "custom_dogs"
   resources :dogs
   resources :employees
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

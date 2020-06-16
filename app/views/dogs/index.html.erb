@@ -1,0 +1,6 @@
+<h1>All Dogs</h1>
+<%@dogs.each do |dog|%>
+    <h3><%= link_to dog.name, dog_path(dog)%></h3>
+<% end %>
+
+<%=button_to "Dogs by Number of Employees", custom_dogs_path, method: :get %>

@@ -1,0 +1,15 @@
+<h1>Employee</h1>
+<%= image_tag @employee.img_url %>
+<h3>Name: <%=@employee.name%></h3>
+<h3>Alias: <%=@employee.alias%></h3>
+<h3>Title: <%=@employee.title%></h3>
+<h3>Office: <%=@employee.office%></h3>
+<!--<h3>Image: <%=@employee.img_url%></h3> %>-->
+<h3>Dog:</h3> 
+<%@dogs.each do |dog|%>
+    <% if dog.id == @employee.dog_id %>
+        <h4><%= dog.name %></h4>
+    <%end%>
+<%end%>
+
+<%=button_to "Edit", edit_employee_path(@employee), method: :get%>

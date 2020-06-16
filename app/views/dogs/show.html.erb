@@ -1,0 +1,10 @@
+<h1>Dog</h1>
+<h3>Name: <%=@dog.name%></h3>
+<h3>Breed: <%=@dog.breed%></h3>
+<h3>Age: <%=@dog.age%></h3>
+<h3>Dunder Mifflin Employee Owners:</h3>
+<%@employees.each do |employee|%>
+    <% if employee.dog_id == @dog.id %>
+        <h4><%= employee.name %></h4>
+    <%end%>
+<%end%>
